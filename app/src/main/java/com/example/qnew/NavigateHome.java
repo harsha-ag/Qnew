@@ -6,10 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.SearchView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,13 +15,29 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.qnew.feedpost.postAdapter;
+import com.example.qnew.feedpost.postdata;
 import com.google.android.material.navigation.NavigationView;
 
-import search.searchlists;
+import com.example.qnew.search.searchlists;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NavigateHome extends AppCompatActivity {
-
+//////
+private String[] names={"pradeep","pradeep1"};
+    private int[] images={R.drawable.ic_menu_camera,R.drawable.ic_menu_gallery};
+    private String[] questions={"asdfsasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf","jklk;jkl;jkl;jkjl;jkl;kj;jkl;jkl;kjl;jkl;jk;k;jlk;jkk;jkl;"};
+    private String[] answers={"jklk;jkl;jkl;jkjl;jkl;kj;jkl;jkl;kjl;jkl;jk;k;jlk;jkk;jkl;","asdfsasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf"};
+    private int[] lcounts={20,30};
+    private int[] dcounts={2,3};
+    private List<postdata> sData=new ArrayList<>();
+    private RecyclerView recyclerView;
+    ///////
     private AppBarConfiguration mAppBarConfiguration;
     private String searchText;
 
@@ -34,7 +47,10 @@ public class NavigateHome extends AppCompatActivity {
         setContentView(R.layout.activity_navigate_home);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+///////
 
+
+        ///////
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -101,4 +117,7 @@ public class NavigateHome extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+    //////////
+
+    //////////
 }

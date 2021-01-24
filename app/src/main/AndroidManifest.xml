@@ -9,22 +9,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Qnew">
-        <activity android:name=".PostLayout">
-
-        </activity>
-        <activity android:name="search.searchlists" />
+        <activity android:name="com.example.qnew.search.searchlists" />
         <activity
             android:name=".NavigateHome"
             android:label="@string/title_activity_navigate_home"
             android:theme="@style/Theme.Qnew.NoActionBar">
+
+        </activity>
+
+
+
+
+        <activity android:name=".feedpost.post">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.search.SearchList" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".search.searchlists" />
+        <activity android:name=".feedpost.post"/>
+
+
+
     </application>
 
 </manifest>

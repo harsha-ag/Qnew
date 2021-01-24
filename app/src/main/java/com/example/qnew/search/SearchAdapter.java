@@ -1,4 +1,4 @@
-package search;
+package com.example.qnew.search;
 
 import android.view.LayoutInflater;
 import android.view.View;

@@ -1,4 +1,4 @@
-package search;
+package com.example.qnew.search;
 
 public class SearchListData {
    private String  nameid;

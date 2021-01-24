@@ -1,10 +1,9 @@
-package search;
+package com.example.qnew.search;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Person;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
