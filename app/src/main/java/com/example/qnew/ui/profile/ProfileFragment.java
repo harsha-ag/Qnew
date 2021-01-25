@@ -30,8 +30,8 @@ public class ProfileFragment extends Fragment {
 
 
         ((TextView)root.findViewById(R.id.tv_myprofile_name)).setText(myProfile.getName());
-        ((TextView)root.findViewById(R.id.tv_myprofile_follower_count)).setText(myProfile.getFollowerCount());
-        ((TextView)root.findViewById(R.id.tv_myprofile_following_count)).setText(myProfile.getFollowingCount());
+        ((TextView)root.findViewById(R.id.tv_myprofile_follower_count)).setText(Integer.toString(myProfile.getFollowerCount()));
+        ((TextView)root.findViewById(R.id.tv_myprofile_following_count)).setText(Integer.toString(myProfile.getFollowingCount()));
         ((TextView)root.findViewById(R.id.tv_myprofile_bio)).setText(myProfile.getBio());
 
         return root;
