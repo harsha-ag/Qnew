@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ShowSingleQuestionActivity extends AppCompatActivity {
+public class EnterAnswerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_single_question);
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.activity_enter_answer );
     }
 }

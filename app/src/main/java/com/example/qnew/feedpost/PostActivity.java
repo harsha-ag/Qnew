@@ -28,8 +28,6 @@ public class PostActivity extends AppCompatActivity {
         prepareTheList();
         recyclerView= findViewById( R.id.rv_postrecycle_recycle11 );
         recyclerView.setLayoutManager( new LinearLayoutManager( this ) );
-
-
        PostAdapter adapter =new PostAdapter( sData );
         recyclerView.setAdapter( adapter );
     }
