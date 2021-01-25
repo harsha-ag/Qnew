@@ -5,7 +5,7 @@ public class PostData {
     private int imageQid;
     private String question;
     private String answer;
-    private  int lcount;
+    private int lcount;
     private int dcount;
 
     public PostData(String nameQid, int imageQid, String question, String answer, int lcount, int dcount) {
