@@ -1,19 +1,19 @@
 package com.example.qnew.search;
 
 public class SearchData {
-   private String  nameid;
-   private int imageid;
+   private String profileName;
+   private String profilePicture;
 
-    public SearchData(String nameid, int imageid) {
-        this.nameid = nameid;
-        this.imageid = imageid;
+    public SearchData(String profileName, String profilePicture) {
+        this.profileName = profileName;
+        this.profilePicture = profilePicture;
     }
 
-    public String getNameid() {
-        return nameid;
+    public String getProfileName() {
+        return profileName;
     }
 
-    public int getImageid() {
-        return imageid;
+    public String getProfilePicture() {
+        return profilePicture;
     }
 }

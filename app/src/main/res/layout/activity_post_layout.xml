@@ -1,122 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="4dp"
-    app:cardElevation="4dp"
     android:layout_margin="8dp"
-    android:padding="5dp">
+    android:padding="5dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
 
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/cv_postlayout_proimage"
-            android:layout_width="72dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
 
-            android:layout_height="56dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.087"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cv_postlayout_proimage"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/cat"
+                app:civ_border_width="2dp" />
 
-        <TextView
-            android:id="@+id/tv_postlayout_name"
-            android:layout_width="177dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="16dp"
-            android:text="XXXXXX XXXXXX"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.628"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_postlayout_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asker Name"
+                android:layout_marginHorizontal="8dp"/>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tv_postlayout_question"
-            android:layout_width="345dp"
-            android:layout_height="52dp"
-            android:layout_marginBottom="264dp"
-            android:text="shcjlshcjsdbljdjjdaj.jjjjnjjmncjnjcjncjnjnjknjknckjnjknjnknckjnskjnckscnkjnknjknskjnjnjnknjnknkjnjnknknjknsncsnckscjskcnskckskncsdknjjsscscdssdcddcdscdscscsdddssds"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.32"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Question Text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_postlayout_answer"
-            android:layout_width="346dp"
-            android:layout_height="134dp"
-            android:layout_marginTop="24dp"
-            android:text="shcjlshcjsdbljdjjdaj.jjjjnjjmncjnjcjncjnjnjknjknckjnjknjnknckjnskjnckscnkjnknjknskjnjnjnknjnknkjnjnknknjknsncsnckscjskcnskckskncsdknjjsscscdssdcddcdscdscscsdddssds"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.326"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_postlayout_question"
-            app:layout_constraintVertical_bias="0.085" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Answer Text" />
 
-        <ImageButton
-            android:id="@+id/ibt_postlayout_like"
-            style="@style/Widget.AppCompat.ImageButton"
-            android:layout_width="56dp"
-            android:layout_height="47dp"
-            android:src="@drawable/thumbsup"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/ibt_postlayout_dislike"
-            app:layout_constraintTop_toBottomOf="@+id/tv_postlayout_answer"
-            app:layout_constraintVertical_bias="0.4" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="5.2"
+            android:gravity="center_vertical">
 
-        <ImageButton
-            android:id="@+id/ibt_postlayout_dislike"
-            android:layout_width="47dp"
-            android:layout_height="46dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="264dp"
-            android:src="@drawable/thumb_down"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_postlayout_answer" />
+            <ImageButton
+                android:id="@+id/ibt_postlayout_like"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/thumbsup"
+                android:layout_weight="1.2" />
 
-        <ImageButton
-            android:id="@+id/ibt_postlayout_share"
-            android:layout_width="50dp"
+            <TextView
+                android:id="@+id/tv_postlayout_likecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:layout_weight="0.8" />
 
-            android:layout_height="45dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="212dp"
-            android:src="@drawable/send"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_postlayout_answer" />
+            <ImageButton
+                android:id="@+id/ibt_postlayout_dislike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/thumb_down"
+                android:layout_weight="1.2" />
 
-        <TextView
-            android:id="@+id/tv_postlayout_likecount"
-            android:layout_width="20dp"
-            android:layout_height="17dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="8dp"
-            android:text="22"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ibt_postlayout_like" />
+            <TextView
+                android:id="@+id/tv_postlayout_dislikecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:layout_weight="0.8"/>
 
-        <TextView
-            android:id="@+id/tv_postlayout_dislikecount"
-            android:layout_width="20dp"
-            android:layout_height="17dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="8dp"
-            android:text="2"
-            app:layout_constraintStart_toEndOf="@+id/tv_postlayout_likecount"
-            app:layout_constraintTop_toBottomOf="@+id/ibt_postlayout_dislike" />
+            <ImageButton
+                android:id="@+id/ibt_postlayout_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/send"
+                android:layout_weight="1.2" />
+        </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
 

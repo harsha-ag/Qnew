@@ -3,32 +3,18 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="4dp"
-    app:cardElevation="4dp"
-    android:layout_margin="8dp"
-    android:padding="5dp">
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp"
+    android:layout_margin="4dp">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
+        android:id="@+id/tv_notifytext_textview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-        <TextView
-            android:id="@+id/tv_notifytext_textview"
-            android:layout_width="309dp"
-            android:layout_height="81dp"
-            android:layout_marginBottom="100dp"
-            android:text="TextView"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="test text notification" />
 
 </androidx.cardview.widget.CardView>
 

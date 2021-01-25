@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.qnew.ui.gallery.GalleryFragment"
+        android:name="com.example.qnew.ui.profile.ProfileFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/profile_fragment" />
 
     <fragment
         android:id="@+id/nav_notification"
-        android:name="com.example.qnew.ui.slideshow.SlideshowFragment"
+        android:name="com.example.qnew.ui.notifications.NotificationFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

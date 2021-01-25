@@ -2,13 +2,13 @@ package com.example.qnew.feedpost;
 
 public class PostData {
     private String nameQid;
-    private int imageQid;
+    private String imageQid;
     private String question;
     private String answer;
     private int lcount;
     private int dcount;
 
-    public PostData(String nameQid, int imageQid, String question, String answer, int lcount, int dcount) {
+    public PostData(String nameQid, String imageQid, String question, String answer, int lcount, int dcount) {
         this.nameQid = nameQid;
         this.imageQid = imageQid;
         this.question = question;
@@ -21,7 +21,7 @@ public class PostData {
         return nameQid;
     }
 
-    public int getImageQid() {
+    public String getImageQid() {
         return imageQid;
     }
 

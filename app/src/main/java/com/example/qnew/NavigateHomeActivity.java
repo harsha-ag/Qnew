@@ -21,10 +21,8 @@ import com.google.android.material.navigation.NavigationView;
 import com.example.qnew.search.SearchActivity;
 
 public class NavigateHomeActivity extends AppCompatActivity {
-//////
-    ///////
+
     private AppBarConfiguration mAppBarConfiguration;
-    private String searchText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,16 +30,12 @@ public class NavigateHomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_navigate_home);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-///////
 
-
-        ///////
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_profile, R.id.nav_notification )
+                R.id.nav_home, R.id.nav_profile, R.id.nav_notification)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -51,7 +45,7 @@ public class NavigateHomeActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.navigate_home, menu);
         MenuItem.OnActionExpandListener onActionExpandListener = new MenuItem.OnActionExpandListener() {
             @Override
@@ -66,12 +60,12 @@ public class NavigateHomeActivity extends AppCompatActivity {
                 return true;
             }
         };
-        menu.findItem( R.id.search ).setOnActionExpandListener( onActionExpandListener );
-        SearchView searchView=(SearchView) menu.findItem( R.id.search ).getActionView();
-        searchView.setQueryHint( "Search data here....." );
-        SearchManager searchManager = (SearchManager)getSystemService(SEARCH_SERVICE);
-        searchView.setSearchableInfo( searchManager.getSearchableInfo(getComponentName()));
-    /////
+        menu.findItem(R.id.search).setOnActionExpandListener(onActionExpandListener);
+        SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
+        searchView.setQueryHint("Find users");
+        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -85,14 +79,13 @@ public class NavigateHomeActivity extends AppCompatActivity {
                 return false;
             }
         });
-        /////
 
         return true;
     }
 
     private void getInput(String query) {
-        Intent in = new Intent( NavigateHomeActivity.this, SearchActivity.class);
-        in.putExtra("TITLE", query);
+        Intent in = new Intent(NavigateHomeActivity.this, SearchActivity.class);
+        in.putExtra("query ", query);
         startActivity(in);
     }
 

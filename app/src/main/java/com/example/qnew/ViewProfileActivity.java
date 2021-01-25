@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,21 +29,30 @@ public class ViewProfileActivity extends AppCompatActivity {
     }
 
     private void populateFields(Profile profile) {
-        ((TextView)findViewById(R.id.tv_profile_name)).setText(profile.getName());
-        if (profile.getBio() != null) ((TextView)findViewById(R.id.tv_profile_bio)).setText(profile.getBio());
-        ((TextView)findViewById(R.id.tv_profile_follower_count)).setText(Integer.toString(profile.getFollowerCount()));
-        ((TextView)findViewById(R.id.tv_profile_following_count)).setText(Integer.toString(profile.getFollowingCount()));
+        ((TextView)findViewById(R.id.tv_myprofile_name)).setText(profile.getName());
+        if (profile.getBio() != null) ((TextView)findViewById(R.id.tv_myprofile_bio)).setText(profile.getBio());
+        ((TextView)findViewById(R.id.tv_myprofile_follower_count)).setText(Integer.toString(profile.getFollowerCount()));
+        ((TextView)findViewById(R.id.tv_myprofile_following_count)).setText(Integer.toString(profile.getFollowingCount()));
         Glide.with(this)
                 .load(profile.getProfilePictureURL())
                 .placeholder(R.drawable.cat)
                 .into((ImageView)findViewById(R.id.civ_profile_picture));
 
-        findViewById(R.id.bt_profile_getposts).setOnClickListener(v -> {
+        Button followButton = findViewById(R.id.bt_profile_follow);
+        Button unfollowButton = findViewById(R.id.bt_profile_unfollow);
+
+        //
+
+        followButton.setOnClickListener(v -> {
+            // follow
+        });
+
+
+        findViewById(R.id.bt_myprofile_getposts).setOnClickListener(v -> {
             // TODO: redirect to Teja's feed activity
             Intent goToPosts = new Intent(ViewProfileActivity.this, ViewProfileActivity.class);
             goToPosts.putExtra("userID", profile.getUserID());
             startActivity(goToPosts);
         });
-
     }
 }

@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public class AddquestionActivity extends Activity implements AdapterView.OnItemSelectedListener {
+public class AddQuestionActivity extends Activity implements AdapterView.OnItemSelectedListener {
     Button button;
     String s;
     @Override

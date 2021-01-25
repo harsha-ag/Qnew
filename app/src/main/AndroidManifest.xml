@@ -14,7 +14,7 @@
         <activity android:name=".EnterAnswerActivity">
 
         </activity>
-        <activity android:name=".AddquestionActivity"></activity>
+        <activity android:name=".AddQuestionActivity"></activity>
         <activity android:name=".search.SearchActivity" />
         <activity
             android:name=".NavigateHomeActivity"
@@ -26,7 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".feedpost.PostActivity"></activity>
         <activity android:name=".ViewProfileActivity">
 
         </activity>

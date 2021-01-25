@@ -7,7 +7,7 @@
     tools:context="com.example.qnew.search.SearchActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv__productlisting_recycleview"
+        android:id="@+id/rv_productlisting_recycleview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="78dp"

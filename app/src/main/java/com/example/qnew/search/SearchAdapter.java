@@ -3,16 +3,16 @@ package com.example.qnew.search;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.qnew.R;
 
 import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.searchviewholder>{
 
@@ -32,8 +32,12 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.searchview
     @Override
     public void onBindViewHolder(@NonNull searchviewholder holder, int position) {
        SearchData searchData =list.get( position );
-       holder.personname.setText( searchData.getNameid() );
-       holder.personimage.setImageResource( searchData.getImageid() );
+       holder.personname.setText( searchData.getProfileName() );
+
+        Glide.with(holder.personimage.getContext())
+                .load(searchData.getProfilePicture())
+                .placeholder(R.drawable.ic_menu_camera)
+                .into(holder.personimage);
 
     }
 
@@ -47,11 +51,11 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.searchview
     public static class searchviewholder extends RecyclerView.ViewHolder
     {
         public TextView personname;
-        public CircleImageView personimage;
+        public ImageView personimage;
         public searchviewholder(@NonNull View itemView) {
             super( itemView );
             personname= itemView.findViewById( R.id.tv_lb_username );
-            personimage= itemView.findViewById( R.id.cv_searchlititems_image );
+            personimage= itemView.findViewById( R.id.cv_searchlistitems_image);
         }
     }
 }

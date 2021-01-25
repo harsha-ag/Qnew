@@ -1,13 +1,13 @@
 package notification;
 
 public class NotificationData {
-    private String notify;
+    private String notification;
 
-    public NotificationData(String notify) {
-        this.notify = notify;
+    public NotificationData(String notification) {
+        this.notification = notification;
     }
 
-    public String getNotify() {
-        return notify;
+    public String getNotification() {
+        return notification;
     }
 }

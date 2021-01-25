@@ -3,11 +3,13 @@ package com.example.qnew.feedpost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.qnew.R;
 
 import java.util.List;
@@ -31,13 +33,18 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
-        PostData postData1 = list.get(position);
-        holder.nameq.setText(postData1.getNameQid() + "");
-        holder.imageq.setImageResource(postData1.getImageQid());
-        holder.question.setText(postData1.getQuestion());
-        holder.answer.setText(postData1.getAnswer());
-        holder.lcount.setText(Integer.toString(postData1.getLcount()));
-        holder.dcount.setText(Integer.toString(postData1.getDcount()));
+        PostData post = list.get(position);
+        holder.nameq.setText(post.getNameQid() + "");
+
+        Glide.with(holder.imageq.getContext())
+                .load(post.getImageQid())
+                .placeholder(R.drawable.ic_menu_camera)
+                .into(holder.imageq);
+
+        holder.question.setText(post.getQuestion());
+        holder.answer.setText(post.getAnswer());
+        holder.lcount.setText(Integer.toString(post.getLcount()));
+        holder.dcount.setText(Integer.toString(post.getDcount()));
     }
 
 
@@ -46,9 +53,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         return list.size();
     }
 
-    public static class PostViewHolder extends RecyclerView.ViewHolder {
+    class PostViewHolder extends RecyclerView.ViewHolder {
         public TextView nameq;
-        public CircleImageView imageq;
+        public ImageView imageq;
         public TextView question;
         public TextView answer;
         public TextView lcount;

@@ -33,7 +33,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/tv_profile_name"
+                android:id="@+id/tv_myprofile_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -49,7 +49,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/civ_profile_picture" />
 
             <TextView
-                android:id="@+id/tv_profile_following_count"
+                android:id="@+id/tv_myprofile_following_count"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -61,10 +61,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_profile_name" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_myprofile_name" />
 
             <TextView
-                android:id="@+id/tv_profile_follower_count"
+                android:id="@+id/tv_myprofile_follower_count"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -76,7 +76,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.76"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_profile_name" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_myprofile_name" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -89,7 +89,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_profile_following_count" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_myprofile_following_count" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -102,10 +102,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.76"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_profile_following_count" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_myprofile_following_count" />
 
             <TextView
-                android:id="@+id/tv_profile_bio"
+                android:id="@+id/tv_myprofile_bio"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -114,10 +114,10 @@
                 android:text="Hi! This is my bio. Nice to meet you!"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_profile_name" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_myprofile_name" />
 
             <Button
-                android:id="@+id/bt_profile_getposts"
+                android:id="@+id/bt_myprofile_getposts"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
                 android:text="Get Posts"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_profile_bio" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_myprofile_bio" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
