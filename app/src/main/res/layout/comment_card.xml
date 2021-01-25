@@ -49,26 +49,32 @@
             style="@style/social_buttons_row"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:gravity="center_vertical"
             android:weightSum="3">
 
             <ImageButton
                 android:id="@+id/ibt_comment_card_like"
                 android:layout_height="50dp"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight=".5"
                 android:src="@drawable/thumbsup" />
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:src="@drawable/thumb_down" />
+            <TextView
+                android:id="@+id/ibt_comment_card_likecount"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
 
             <ImageButton
+                android:id="@+id/ibt_comment_card_dislike"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:src="@drawable/social_comment" />
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:src="@drawable/thumb_down" />
+
+            <TextView
+                android:id="@+id/ibt_comment_card_dislikecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
 
         </LinearLayout>

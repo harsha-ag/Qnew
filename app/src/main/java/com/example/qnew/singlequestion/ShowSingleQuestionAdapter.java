@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.qnew.R;
-import com.example.qnew.feedpost.PostAdapter;
 
 import java.util.List;
 
@@ -48,9 +47,9 @@ public class ShowSingleQuestionAdapter extends RecyclerView.Adapter<ShowSingleQu
         public TextView name;
         public singleviewholder(@NonNull View itemView) {
             super( itemView );
-            answer= itemView.findViewById( R.id.tv_singlepostanswer_textview );
-            image= itemView.findViewById( R.id.civ_singlepost_answerer_picture );
-            name =itemView.findViewById( R.id.civ_singlepost_answerer_name );
+            answer= itemView.findViewById( R.id.tv_comment_card_textview );
+            image= itemView.findViewById( R.id.civ_comment_card_picture );
+            name =itemView.findViewById( R.id.civ_comment_card_name );
         }
     }
 }

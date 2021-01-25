@@ -14,17 +14,21 @@
         <activity android:name=".EnterAnswerActivity">
 
         </activity>
+        <activity android:name="Comment.CommentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".AddQuestionActivity"></activity>
         <activity android:name=".search.SearchActivity" />
         <activity
             android:name=".NavigateHomeActivity"
             android:label="@string/title_activity_navigate_home"
             android:theme="@style/Theme.Qnew.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".ViewProfileActivity">
 
