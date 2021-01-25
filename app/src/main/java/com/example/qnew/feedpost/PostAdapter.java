@@ -14,26 +14,26 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class postAdapter extends RecyclerView.Adapter<postAdapter.postviewholder> {
+public class PostAdapter extends RecyclerView.Adapter<PostAdapter.postviewholder> {
 
-    private List<postdata> list;
-    public postAdapter(List<postdata> list){this.list=list;}
+    private List<PostData> list;
+    public PostAdapter(List<PostData> list){this.list=list;}
     @NonNull
     @Override
     public postviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from( parent.getContext() ).inflate( R.layout.searchlititems,parent,false );
+        View view= LayoutInflater.from( parent.getContext() ).inflate( R.layout.activity_post_layout,parent,false );
         return new postviewholder( view );
     }
 
     @Override
     public void onBindViewHolder(@NonNull postviewholder holder, int position) {
-        postdata postdata=list.get( position );
-        holder.nameq.setText( postdata.getNameQid() );
-        holder.imageq.setImageResource( postdata.getImageQid() );
-        holder.question.setText( postdata.getQuestion() );
-        holder.answer.setText( postdata.getAnswer() );
-        holder.lcount.setText( postdata.getLcount() );
-        holder.dcount.setText( postdata.getDcount() );
+        PostData postData1 =list.get( position );
+        holder.nameq.setText( postData1.getNameQid()+"");
+        holder.imageq.setImageResource( postData1.getImageQid() );
+        holder.question.setText( postData1.getQuestion() );
+        holder.answer.setText( postData1.getAnswer() );
+        holder.lcount.setText(Integer.toString( postData1.getLcount() ));
+        holder.dcount.setText(Integer.toString( postData1.getDcount() ));
     }
 
 

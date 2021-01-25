@@ -15,28 +15,13 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.qnew.feedpost.postAdapter;
-import com.example.qnew.feedpost.postdata;
 import com.google.android.material.navigation.NavigationView;
 
-import com.example.qnew.search.searchlists;
+import com.example.qnew.search.SearchActivity;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class NavigateHome extends AppCompatActivity {
+public class NavigateHomeActivity extends AppCompatActivity {
 //////
-private String[] names={"pradeep","pradeep1"};
-    private int[] images={R.drawable.ic_menu_camera,R.drawable.ic_menu_gallery};
-    private String[] questions={"asdfsasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf","jklk;jkl;jkl;jkjl;jkl;kj;jkl;jkl;kjl;jkl;jk;k;jlk;jkk;jkl;"};
-    private String[] answers={"jklk;jkl;jkl;jkjl;jkl;kj;jkl;jkl;kjl;jkl;jk;k;jlk;jkk;jkl;","asdfsasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf"};
-    private int[] lcounts={20,30};
-    private int[] dcounts={2,3};
-    private List<postdata> sData=new ArrayList<>();
-    private RecyclerView recyclerView;
     ///////
     private AppBarConfiguration mAppBarConfiguration;
     private String searchText;
@@ -106,7 +91,7 @@ private String[] names={"pradeep","pradeep1"};
     }
 
     private void getInput(String query) {
-        Intent in = new Intent(NavigateHome.this, searchlists.class);
+        Intent in = new Intent( NavigateHomeActivity.this, SearchActivity.class);
         in.putExtra("TITLE", query);
         startActivity(in);
     }

@@ -13,11 +13,11 @@ import com.example.qnew.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class searchlists extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
     private String[] names={"pradeep","pradeep1","pradeep2"};
     private int[] images={R.drawable.ic_menu_camera,R.drawable.ic_menu_gallery,R.drawable.ic_launcher_background};
-    private List<SearchListData> sData=new ArrayList<>();
+    private List<SearchData> sData=new ArrayList<>();
     private RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class searchlists extends AppCompatActivity {
 
         String s = getIntent().getStringExtra( "TITLE" );
         Log.d("TEST", s);
-        Toast.makeText( searchlists.this,s, Toast.LENGTH_SHORT ).show();
+        Toast.makeText( SearchActivity.this,s, Toast.LENGTH_SHORT ).show();
         recyclerView= findViewById( R.id.rv__productlisting_recycleview );
         recyclerView.setLayoutManager( new LinearLayoutManager( this ) );
         prepareTheList();
@@ -38,8 +38,8 @@ public class searchlists extends AppCompatActivity {
         int count =0;
         for (String name: names)
         {
-            SearchListData searchListData= new SearchListData(name,images[count]);
-           sData.add( searchListData );
+            SearchData searchData = new SearchData(name,images[count]);
+           sData.add( searchData );
            count++;
         }
     }

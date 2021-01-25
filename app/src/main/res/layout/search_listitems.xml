@@ -21,7 +21,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
 
-            android:id="@+id/profile_image"
+            android:id="@+id/cv_searchlititems_image"
             tools:layout_editor_absoluteX="27dp"
             tools:layout_editor_absoluteY="0dp" />
 

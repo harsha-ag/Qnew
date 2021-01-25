@@ -1,6 +1,6 @@
 package com.example.qnew.feedpost;
 
-public class postdata {
+public class PostData {
     private String nameQid;
     private int imageQid;
     private String question;
@@ -8,7 +8,7 @@ public class postdata {
     private  int lcount;
     private int dcount;
 
-    public postdata(String nameQid, int imageQid, String question, String answer, int lcount, int dcount) {
+    public PostData(String nameQid, int imageQid, String question, String answer, int lcount, int dcount) {
         this.nameQid = nameQid;
         this.imageQid = imageQid;
         this.question = question;

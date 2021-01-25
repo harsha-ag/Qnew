@@ -16,24 +16,24 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.searchviewholder>{
 
-    private List<SearchListData> list;
+    private List<SearchData> list;
 
-    public SearchAdapter(List<SearchListData> list) {
+    public SearchAdapter(List<SearchData> list) {
         this.list = list;
     }
 
     @NonNull
     @Override
     public searchviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view=LayoutInflater.from( parent.getContext() ).inflate( R.layout.searchlititems,parent,false );
+        View view=LayoutInflater.from( parent.getContext() ).inflate( R.layout.search_listitems,parent,false );
         return new searchviewholder( view );
     }
 
     @Override
     public void onBindViewHolder(@NonNull searchviewholder holder, int position) {
-       SearchListData searchListData=list.get( position );
-       holder.personname.setText( searchListData.getNameid() );
-       holder.personimage.setImageResource( searchListData.getImageid() );
+       SearchData searchData =list.get( position );
+       holder.personname.setText( searchData.getNameid() );
+       holder.personimage.setImageResource( searchData.getImageid() );
 
     }
 
@@ -51,7 +51,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.searchview
         public searchviewholder(@NonNull View itemView) {
             super( itemView );
             personname= itemView.findViewById( R.id.tv_lb_username );
-            personimage= itemView.findViewById( R.id.profile_image );
+            personimage= itemView.findViewById( R.id.cv_searchlititems_image );
         }
     }
 }
