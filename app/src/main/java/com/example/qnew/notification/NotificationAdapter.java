@@ -1,4 +1,4 @@
-package notification;
+package com.example.qnew.notification;
 
 import android.view.LayoutInflater;
 import android.view.View;
