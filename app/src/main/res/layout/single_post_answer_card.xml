@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp"
+    app:contentPadding="2dp"
+    android:layout_marginVertical="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="This is an answer to your question. I like answering questions." />
+
+        <LinearLayout
+            android:id="@+id/ll_answerer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_singlepost_answerer_picture"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginHorizontal="8dp"
+                android:src="@drawable/cat" />
+
+            <TextView
+                android:id="@+id/civ_singlepost_answerer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="St. Kitty Cat Junior" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_social"
+            style="@style/social_buttons_row"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <ImageButton
+                android:id="@+id/bt_social_answer_upvote"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/social_upvote" />
+
+            <ImageButton
+                android:id="@+id/bt_social_answer_downvote"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/social_downvote" />
+
+            <ImageButton
+                android:id="@+id/bt_social_answer_reaction"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_search" />
+
+            <ImageButton
+                android:id="@+id/bt_social_answer_comment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/social_comment" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
