@@ -7,14 +7,16 @@ public class PostData {
     private String answer;
     private int lcount;
     private int dcount;
+    private String category;
 
-    public PostData(String nameQid, String imageQid, String question, String answer, int lcount, int dcount) {
+    public PostData(String nameQid, String imageQid, String question, String answer, int lcount, int dcount, String category) {
         this.nameQid = nameQid;
         this.imageQid = imageQid;
         this.question = question;
         this.answer = answer;
         this.lcount = lcount;
         this.dcount = dcount;
+        this.category = category;
     }
 
     public String getNameQid() {
@@ -39,5 +41,9 @@ public class PostData {
 
     public int getDcount() {
         return dcount;
+    }
+
+    public String getCategory() {
+        return category;
     }
 }
