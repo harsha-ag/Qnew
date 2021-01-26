@@ -68,28 +68,28 @@
                 android:layout_weight="1.2" />
 
             <TextView
-                android:id="@+id/tv_postlayout_likecount"
+                android:id="@+id/tv_answerfragment_card_upvote_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="22"
                 android:layout_weight="0.8" />
 
             <ImageButton
-                android:id="@+id/ibt_postlayout_dislike"
+                android:id="@+id/ibt_postlayout_downvote"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 android:src="@drawable/social_downvote_black"
                 android:layout_weight="1.2" />
 
             <TextView
-                android:id="@+id/tv_postlayout_dislikecount"
+                android:id="@+id/tv_answerfragment_card_downvote_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2"
                 android:layout_weight="0.8" />
 
             <ImageButton
-                android:id="@+id/ibt_postlayout_share"
+                android:id="@+id/tv_answerfragment_card_comment"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 android:src="@drawable/social_comment"

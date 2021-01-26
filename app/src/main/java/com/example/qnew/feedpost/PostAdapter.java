@@ -46,6 +46,23 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         holder.lcount.setText(Integer.toString(post.getLcount()));
         holder.dcount.setText(Integer.toString(post.getDcount()));
         holder.category.setText(post.getCategory());
+
+//        holder.upvote.setOnClickListener(v -> {
+//
+//            holder.upvote.setImageResource(R.drawable.social_upvote_red);
+////            holder.upvote.setImageResource(R.drawable.social_upvote_black);
+//        });
+//
+//        holder.downvote.setOnClickListener(v -> {
+//            holder.downvote.setImageResource(R.drawable.social_downvote_red);
+//            holder.downvote.setImageResource(R.drawable.social_downvote_black);
+//        });
+
+
+    }
+
+    private void clearAllReactions(PostViewHolder holder) {
+
     }
 
 
@@ -71,11 +88,11 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
             imageq = itemView.findViewById(R.id.cv_answerfragment_card_proimage );
             question = itemView.findViewById(R.id.tv_answerfragment_card_category );
             answer = itemView.findViewById(R.id.tv_answerfragment_card_question );
-            lcount = itemView.findViewById(R.id.tv_postlayout_likecount);
-            dcount = itemView.findViewById(R.id.tv_postlayout_dislikecount);
+            lcount = itemView.findViewById(R.id.tv_answerfragment_card_upvote_count);
+            dcount = itemView.findViewById(R.id.tv_answerfragment_card_downvote_count);
             upvote = itemView.findViewById(R.id.ibt_postlayout_upvote);
             downvote = itemView.findViewById(R.id.ibt_postlayout_downvote);
-            category = itemView.findViewById(R.id.tv_activity_post_layout_category);
+            category = itemView.findViewById(R.id.tv_answerfragment_card_category);
 
         }
     }
