@@ -78,7 +78,7 @@
                 android:id="@+id/ibt_postlayout_dislike"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
-                android:src="@drawable/social_downvote_red"
+                android:src="@drawable/social_downvote_black"
                 android:layout_weight="1.2" />
 
             <TextView

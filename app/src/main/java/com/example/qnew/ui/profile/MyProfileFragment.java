@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import com.example.qnew.R;
 import com.example.qnew.entities.Profile;
 
-public class ProfileFragment extends Fragment {
+public class MyProfileFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

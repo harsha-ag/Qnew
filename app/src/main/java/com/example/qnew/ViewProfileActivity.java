@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -41,10 +42,18 @@ public class ViewProfileActivity extends AppCompatActivity {
         Button followButton = findViewById(R.id.bt_profile_follow);
         Button unfollowButton = findViewById(R.id.bt_profile_unfollow);
 
-        //
-
         followButton.setOnClickListener(v -> {
             // follow
+
+            followButton.setVisibility(View.INVISIBLE);
+            unfollowButton.setVisibility(View.VISIBLE);
+        });
+
+        unfollowButton.setOnClickListener(v -> {
+            // unfollow
+
+            followButton.setVisibility(View.VISIBLE);
+            unfollowButton.setVisibility(View.INVISIBLE);
         });
 
 
