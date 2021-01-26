@@ -8,8 +8,13 @@ public class PostData {
     private int lcount;
     private int dcount;
     private String category;
+    private int reactionType;
 
-    public PostData(String nameQid, String imageQid, String question, String answer, int lcount, int dcount, String category) {
+    public void setReactionType(int reactionType) {
+        this.reactionType = reactionType;
+    }
+
+    public PostData(String nameQid, String imageQid, String question, String answer, int lcount, int dcount, String category, int reactionType) {
         this.nameQid = nameQid;
         this.imageQid = imageQid;
         this.question = question;
@@ -17,6 +22,11 @@ public class PostData {
         this.lcount = lcount;
         this.dcount = dcount;
         this.category = category;
+        this.reactionType = reactionType;
+    }
+
+    public int getReactionType() {
+        return reactionType;
     }
 
     public String getNameQid() {
