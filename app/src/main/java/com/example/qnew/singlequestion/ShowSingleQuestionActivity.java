@@ -9,34 +9,33 @@ import android.os.Bundle;
 import com.example.qnew.R;
 import com.example.qnew.feedpost.PostAdapter;
 import com.example.qnew.feedpost.PostData;
+import com.example.qnew.search.SearchAdapter;
+import com.example.qnew.search.SearchData;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ShowSingleQuestionActivity extends AppCompatActivity {
-    private String[] answers={"asdfsasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf","jklk;jkl;jkl;jkjl;jkl;kj;jkl;jkl;kjl;jkl;jk;k;jlk;jkk;jkl;"};
-    private int[] images={R.drawable.ic_menu_camera,R.drawable.ic_menu_gallery};
-    private String[] names={"pradeep","pradeep1"};
-    private List<ShowSingleQuestionData> sData=new ArrayList<>();
-    private RecyclerView recyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView( R.layout.activity_show_single_question);
-        prepareTheList();
-        recyclerView= findViewById( R.id.rv_singlepost_answers );
-        recyclerView.setLayoutManager( new LinearLayoutManager( this ) );
-        ShowSingleQuestionAdapter adapter =new ShowSingleQuestionAdapter( sData );
-        recyclerView.setAdapter( adapter );
+
+        List<ShowSingleQuestionData> results = new ArrayList<ShowSingleQuestionData>();
+        results.add(new ShowSingleQuestionData("Answer", "https://vetmed.tamu.edu/news/wp-content/uploads/sites/9/2019/01/pettalk011719_450x300-300x200.jpg","Leonardo"));
+        results.add(new ShowSingleQuestionData("Answer", "https://vetmed.tamu.edu/news/wp-content/uploads/sites/9/2019/01/pettalk011719_450x300-300x200.jpg","Leonardo"));
+        results.add(new ShowSingleQuestionData("Answer", "https://vetmed.tamu.edu/news/wp-content/uploads/sites/9/2019/01/pettalk011719_450x300-300x200.jpg","Leonardo"));
+        results.add(new ShowSingleQuestionData("Answer", "https://vetmed.tamu.edu/news/wp-content/uploads/sites/9/2019/01/pettalk011719_450x300-300x200.jpg","Leonardo"));
+        results.add(new ShowSingleQuestionData("Answer", "https://vetmed.tamu.edu/news/wp-content/uploads/sites/9/2019/01/pettalk011719_450x300-300x200.jpg","Leonardo"));
+
+        String query = getIntent().getStringExtra("query");
+
+        RecyclerView recyclerView = findViewById(R.id.rv_singlepost_answers);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        ShowSingleQuestionAdapter adapter = new ShowSingleQuestionAdapter(results);
+        recyclerView.setAdapter(adapter);
     }
-    private void prepareTheList()
-    {
-        int count =0;
-        for (String answer: answers)
-        {
-            ShowSingleQuestionData showSingleQuestionData = new ShowSingleQuestionData(answer,images[count],names[count]);
-            sData.add( showSingleQuestionData );
-            count++;
-        }
-    }
+
 }

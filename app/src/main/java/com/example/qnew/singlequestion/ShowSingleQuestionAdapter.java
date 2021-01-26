@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.qnew.R;
 
 import java.util.List;
@@ -32,7 +33,11 @@ public class ShowSingleQuestionAdapter extends RecyclerView.Adapter<ShowSingleQu
     public void onBindViewHolder(@NonNull AnswerViewHolder holder, int position) {
         ShowSingleQuestionData showSingleQuestionData = list.get(position);
         holder.answer.setText(showSingleQuestionData.getAnswer() + "");
-        holder.image.setImageResource(showSingleQuestionData.getImageid());
+        //holder.image.setImageResource(showSingleQuestionData.getImageid());
+        Glide.with(holder.image.getContext())
+                .load(showSingleQuestionData.getImageid())
+                .placeholder(R.drawable.ic_menu_camera)
+                .into(holder.image);
         holder.name.setText(showSingleQuestionData.getName());
 
     }
@@ -54,12 +59,12 @@ public class ShowSingleQuestionAdapter extends RecyclerView.Adapter<ShowSingleQu
 
         public AnswerViewHolder(@NonNull View itemView) {
             super(itemView);
-            answer = itemView.findViewById(R.id.tv_singlepostanswer_textview);
-            image = itemView.findViewById(R.id.civ_singlepost_answerer_picture);
-            name = itemView.findViewById(R.id.tv_singlepost_answerer_name);
-            upvote = itemView.findViewById(R.id.ibt_postlayout_upvote);
-            downvote = itemView.findViewById(R.id.ibt_postlayout_downvote);
-            comment = itemView.findViewById(R.id.ibt_postlayout_comment);
+            answer = itemView.findViewById(R.id.tv_post_answer_card_answer );
+            image = itemView.findViewById(R.id.civ_post_answer_card_picture );
+            name = itemView.findViewById(R.id.tv_post_answerer_card_name );
+//            upvote = itemView.findViewById(R.id.ibt_postlayout_upvote);
+//            downvote = itemView.findViewById(R.id.ibt_postlayout_downvote);
+//            comment = itemView.findViewById(R.id.ibt_postlayout_comment);
         }
     }
 }

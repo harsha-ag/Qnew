@@ -14,8 +14,6 @@ import com.example.qnew.R;
 
 import java.util.List;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
 class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.commentviewholder> {
     private List<CommentData> list;
     public CommentAdapter(List<CommentData> list){this.list=list;}
@@ -56,8 +54,8 @@ class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.commentviewhold
 
         public commentviewholder(@NonNull View itemView) {
             super( itemView );
-            comment= itemView.findViewById( R.id.tv_comment_card_textview );
-            image= itemView.findViewById( R.id.civ_comment_card_picture );
+            comment= itemView.findViewById( R.id.tv_post_answer_card_answer );
+            image= itemView.findViewById( R.id.civ_post_answer_card_picture );
             name =itemView.findViewById( R.id.civ_comment_card_name );
             likecounts=itemView.findViewById( R.id.ibt_comment_card_likecount );
             dislikecounts=itemView.findViewById( R.id.ibt_comment_card_dislikecount );
