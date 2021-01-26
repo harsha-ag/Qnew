@@ -62,14 +62,14 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/social_upvote" />
+            android:src="@drawable/social_upvote_black" />
 
         <ImageButton
             android:id="@+id/bt_social_question_downvote"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/social_downvote" />
+            android:src="@drawable/social_downvote_black" />
 
         <ImageButton
             android:id="@+id/bt_social_question_reaction"

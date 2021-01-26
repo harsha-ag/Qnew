@@ -1,4 +1,4 @@
-package notification;
+package com.example.qnew.notification;
 
 public class NotificationData {
     private String notification;

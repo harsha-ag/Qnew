@@ -17,8 +17,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import notification.NotificationAdapter;
-import notification.NotificationData;
+import com.example.qnew.notification.NotificationAdapter;
+import com.example.qnew.notification.NotificationData;
 
 public class NotificationFragment extends Fragment {
 
