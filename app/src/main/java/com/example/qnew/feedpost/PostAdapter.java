@@ -14,8 +14,6 @@ import com.example.qnew.R;
 
 import java.util.List;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
 
     private List<PostData> list;
@@ -63,10 +61,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
-            nameq = itemView.findViewById(R.id.tv_postlayout_name);
-            imageq = itemView.findViewById(R.id.cv_postlayout_proimage);
-            question = itemView.findViewById(R.id.tv_postlayout_question);
-            answer = itemView.findViewById(R.id.tv_postlayout_answer);
+            nameq = itemView.findViewById(R.id.tv_answerfragment_card_name );
+            imageq = itemView.findViewById(R.id.cv_answerfragment_card_proimage );
+            question = itemView.findViewById(R.id.tv_answerfragment_card_category );
+            answer = itemView.findViewById(R.id.tv_answerfragment_card_question );
             lcount = itemView.findViewById(R.id.tv_postlayout_likecount);
             dcount = itemView.findViewById(R.id.tv_postlayout_dislikecount);
 
