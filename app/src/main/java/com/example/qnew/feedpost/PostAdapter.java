@@ -3,6 +3,8 @@ package com.example.qnew.feedpost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,6 +47,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         holder.answer.setText(post.getAnswer());
         holder.lcount.setText(Integer.toString(post.getLcount()));
         holder.dcount.setText(Integer.toString(post.getDcount()));
+        holder.category.setText(post.getCategory());
     }
 
 
@@ -60,16 +63,21 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         public TextView answer;
         public TextView lcount;
         public TextView dcount;
+        public ImageButton upvote;
+        public ImageButton downvote;
+        public TextView category;
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
             nameq = itemView.findViewById(R.id.tv_postlayout_name);
             imageq = itemView.findViewById(R.id.cv_postlayout_proimage);
-            question = itemView.findViewById(R.id.tv_postlayout_question);
+            question = itemView.findViewById(R.id.tv_activity_post_layout_question_text);
             answer = itemView.findViewById(R.id.tv_postlayout_answer);
             lcount = itemView.findViewById(R.id.tv_postlayout_likecount);
             dcount = itemView.findViewById(R.id.tv_postlayout_dislikecount);
-
+            upvote = itemView.findViewById(R.id.ibt_postlayout_upvote);
+            downvote = itemView.findViewById(R.id.ibt_postlayout_downvote);
+            category = itemView.findViewById(R.id.tv_activity_post_layout_category);
 
         }
     }

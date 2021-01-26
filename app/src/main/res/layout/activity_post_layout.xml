@@ -37,13 +37,19 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tv_postlayout_question"
+            android:id="@+id/tv_activity_post_layout_question_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="8dp"
             android:text="Question Text"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_activity_post_layout_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category" />
 
         <TextView
             android:id="@+id/tv_postlayout_answer"
@@ -95,6 +101,8 @@
                 android:src="@drawable/social_comment"
                 android:layout_weight="1.2" />
         </LinearLayout>
+
+
 
     </LinearLayout>
 
